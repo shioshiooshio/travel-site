@@ -1,0 +1,97 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  padding: 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.spot-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.spot-card:last-child {
+  border-bottom: none;
+}
+
+.spot-card img {
+  width: 200px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.description h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.description p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* ぷかぷか浮かぶフォーム用アニメーション */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 浮いてるフォームのデザイン */
+.floating-form {
+  position: fixed;
+  top: 60px;
+  right: 40px;
+  width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 1000;
+
+  /* ✨ ぷかぷかアニメーション */
+  animation: float 4s ease-in-out infinite;
+}
+
+/* 入力項目を縦に整列 */
+.floating-form input,
+.floating-form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* 追加ボタンのデザイン */
+.floating-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* ホバー時に色が変わる演出 */
+.floating-form button:hover {
+  background-color: #005fa3;
+}
