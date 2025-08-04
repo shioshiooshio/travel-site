@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // アニメーション後にページ遷移
       setTimeout(() => {
-        window.location.href = `pre/${id}.html`;
+        window.location.href = `${id}.html`;
       }, 1000); // CSSのアニメーション時間と合わせる
     });
   });
