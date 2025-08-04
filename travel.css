@@ -1,0 +1,198 @@
+body {
+  background-color: #eaffea; /* 薄い緑 */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.label.show {
+  opacity: 1;
+}
+
+.map.zoom-out {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.prefecture {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.prefecture:hover {
+  transform: scale(1.05);
+}
+
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  position: relative;
+}
+
+.map {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background-color: transparent;
+  border: transparent;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* 群馬 */
+.gumma {
+  position: absolute;
+  top: 165px;
+  left: 110px;
+  width: 100px;
+}
+
+/* 栃木 */
+.tochigi {
+  position: absolute;
+  top: 145px;
+  left: 175px;
+  width: 95px;
+}
+
+/* 茨城 */
+.ibaraki {
+  position: absolute;
+  top: 168px;
+  left: 207px;
+  width: 115px;
+}
+
+/* 山梨 */
+.yamanashi {
+  position: absolute;
+  top: 271px;
+  left: 92px;
+  width: 73px;
+}
+
+/* 埼玉 */
+.saitama {
+  position: absolute;
+  top: 215px;
+  left: 135px;
+  width: 95px;
+}
+
+/* 東京 */
+.tokyo {
+  position: absolute;
+  top: 260px;
+  left: 155px;
+  width: 70px;
+}
+
+/* 千葉 */
+.chiba {
+  position: absolute;
+  top: 263px;
+  left: 215px;
+  width: 110px;
+}
+
+/* 神奈川 */
+.kanagawa {
+  position: absolute;
+  top: 294px;
+  left: 157px;
+  width: 64px;
+}
+
+/* 静岡 */
+.shizuoka {
+  position: absolute;
+  top: 287px;
+  left: 35px;
+  width: 135px;
+}
+
+/* 長野 */
+.nagano {
+  position: absolute;
+  top: 163px;
+  left: -11px;
+  width: 180px;
+}
+
+/* 新潟 */
+.niigata {
+  position: absolute;
+  top: 10px;
+  left: 45px;
+  width: 180px;
+}
+
+/* .gumma { grid-column: 2; grid-row: 1; }
+.tochigi { grid-column: 3; grid-row: 1; }
+.ibaraki { grid-column: 4; grid-row: 1; }
+
+.saitama { grid-column: 2; grid-row: 2; }
+.yamanashi { grid-column: 1; grid-row: 2; }
+.tokyo { grid-column: 3; grid-row: 2; }
+.chiba { grid-column: 4; grid-row: 2; }
+
+.kanagawa { grid-column: 3; grid-row: 3; }
+.shizuoka { grid-column: 2; grid-row: 3; }
+.nagano { grid-column: 1; grid-row: 3; }
+.niigata { grid-column: 1; grid-row: 1; } */
+
